@@ -3,7 +3,7 @@
 	width: 100%;
 	position: relative;
 	background: rgba(0,0,0,.05);/* change me to an image */
-	padding: 4rem 10rem;
+	padding: 4rem 2rem;
 }
 .sectionTitle{
     font-family: 'DIN_Cond',sans-serif;
@@ -15,4 +15,6 @@
 }
 .sectionBody{
     padding-top: 4rem;
+    margin: 0 auto;
+    max-width: 65rem;
 }
