@@ -91,3 +91,10 @@ h1{
 	margin-top:4rem;
 	font-size: 1.2rem;
 }
+.contactButtons{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	padding-top: 4rem;
+}
