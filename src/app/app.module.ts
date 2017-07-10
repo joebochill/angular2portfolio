@@ -8,6 +8,7 @@ import { PortfolioPanelComponent } from './portfolio-panel.component';
 import { ContactPanelComponent } from './contact-panel.component';
 import { SocialButtonComponent } from './social-button.component';
 import { InfoBlurbComponent } from './info-blurb.component';
+import { ProjectDetailsComponent } from './project-details.component';
 
 @NgModule({
 	imports: [ BrowserModule ],
@@ -18,7 +19,8 @@ import { InfoBlurbComponent } from './info-blurb.component';
 		PortfolioPanelComponent,
 		ContactPanelComponent,
 		SocialButtonComponent,
-		InfoBlurbComponent
+		InfoBlurbComponent,
+		ProjectDetailsComponent
 	],
 	bootstrap: [ AppComponent ]
 })
