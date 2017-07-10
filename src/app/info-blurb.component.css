@@ -1,0 +1,81 @@
+.blurbBody{
+	display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    position: relative;
+    border-bottom: 0.1rem solid rgba(0,0,0,.05);
+}
+/*:host:not(:last-child) .blurbBody:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left:35%;
+  height: .1rem;
+  width: 30%;
+  border-bottom: 0.1rem solid rgba(0,0,0,.05);
+}*/
+:host:last-child .blurbBody{
+	margin-bottom: 0;	
+	border-bottom: 0;
+}
+:host[reverse] .blurbBody{
+    flex-direction: row-reverse;
+}
+.blurbImage{
+	height: 8rem;
+	width: 8rem;
+	flex: 0 0 auto;
+	margin-right: 2rem;
+	background-size: 8rem 8rem;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+:host[small] .blurbImage{
+	background-size: 4rem 4rem;
+	background-position: top center;
+}
+:host[medium] .blurbImage{
+	background-size: 5rem 5rem;
+	background-position: top center;
+}
+:host[reverse] .blurbImage{
+	margin-right: 0;
+	margin-left: 2rem;
+}
+.blurbContent{
+	padding-right: 10rem;
+	flex: 1 1 0px;
+	min-width: 0px;
+}
+:host[reverse] .blurbContent{
+	padding-right: 0;
+	padding-left: 10rem;
+}
+:host[noimage] .blurbContent{
+	padding: 0;
+}
+:host /deep/ h1{
+	margin: 0;
+	font-size: 1.5rem;
+	font-weight: 800;
+}
+:host /deep/ h1:not(:first-child){
+	margin-top: 1rem;
+}
+:host /deep/ h2{
+	margin: 0;
+	font-size: 1.5rem;
+	font-weight: normal;
+	text-align: justify;
+}
+:host /deep/ h3{
+	margin: 0;
+	font-size: 1rem;
+	font-weight: normal;
+	text-align: justify;
+}
+:host[reverse] /deep/ h1{
+	text-align: right;
+} 

@@ -1,0 +1,47 @@
+@font-face {
+    font-family: "DIN";
+    font-weight: regular;
+    src: url('./fonts/dinregular.ttf');
+}
+@font-face {
+    font-family: "DIN";
+    font-weight: bold;
+    src: url('./fonts/dinbold.ttf');
+}
+@font-face {
+    font-family: "DIN";
+    font-weight: 800;
+    font-weight: ;
+    src: url('./fonts/dinmedium.ttf');
+}
+@font-face {
+    font-family: "DIN";
+    font-weight: lighter;
+    src: url('./fonts/dinlight.ttf');
+}
+@font-face {
+    font-family: "DIN_Cond";
+    font-weight: regular;
+    src: url('./fonts/dincondregular.otf');
+}
+@font-face {
+    font-family: "DIN_Cond";
+    font-weight: bold;
+    src: url('./fonts/dincondbold.otf');
+}
+
+
+html{
+	height: 100%;
+	width: 100%;
+    font-family: 'DIN', sans-serif;
+	font-size: 14px;
+}
+body{
+	height: 100%;
+	width: 100%;
+	margin:0;
+}
+body *{
+	box-sizing: border-box;
+}

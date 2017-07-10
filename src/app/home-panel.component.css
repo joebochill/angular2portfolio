@@ -1,0 +1,73 @@
+.homePanel{
+	height: 100%;
+	width: 100%;
+	position: relative;
+	background-image: url('../images/main_bg.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.shadowBox{
+	position: absolute;
+	bottom: 15%;
+	width: 100%;
+	padding: 1.5em;
+	background: rgba(0,0,0,.6);
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-end;
+}
+.homeText{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	font-family: 'DIN', sans-serif;
+	color: white;
+	user-select: none;
+	cursor: default;
+}
+.navBar{
+	font-size: 1.5rem;
+	line-height: 1.5rem;
+	font-weight: lighter;
+	padding-left: 2rem;
+	color: rgba(255,255,255,.7);
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.navBar > div{
+	cursor: pointer;
+	position: relative;
+	margin: 0 .5rem;
+	border-bottom: 0.1rem solid transparent;
+}
+.navBar > div:first-child{
+	margin-left: 0;
+}
+.navBar > div:hover{
+	color: white;
+	opacity: 1;
+	border-color: white;
+}
+.nameBar{
+	font-family: 'DIN_Cond', sans-serif;
+	font-size: 10rem;
+	line-height: 8rem;
+}
+.roleBar{
+	font-weight: medium;
+	font-size: 2.5rem;
+	line-height: 2.5rem;
+	color: rgba(255,255,255,.7);
+}
+.icon.download{
+	padding-left: 1.5rem;
+	display: inline-block;
+	background-image: url('../images/download.svg');
+	background-size: 1rem 1rem;
+	background-position: left center;
+	background-repeat: no-repeat;
+	color: white;
+	opacity: 0.7;
+}

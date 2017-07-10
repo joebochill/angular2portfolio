@@ -1,0 +1,28 @@
+.aboutPanel{
+	height: auto;
+	width: 100%;
+	position: relative;
+	background: rgba(0,0,0,.1);/* change me to an image */
+	padding: 4rem 10rem;
+}
+.sectionTitle{
+    font-family: 'DIN_Cond',sans-serif;
+    font-size: 6rem;
+    line-height: 5rem;
+    font-weight: bold;
+    text-align: center;
+    color: #333333;
+}
+.sectionBody{
+    padding-top: 4rem;
+}
+.icon.top{
+	background-image: url('../images/download.svg');
+	background-size: 3rem 3rem;
+	height: 3rem;
+	width: 3rem;
+	background-position: center;
+	background-repeat: no-repeat;
+	margin-left: 2rem;
+	cursor: pointer;
+}
