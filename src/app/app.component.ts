@@ -4,9 +4,9 @@ import { Component } from '@angular/core';
 	selector: 'my-app',
 	template: `
 		<home-panel></home-panel>
-		<about-panel></about-panel>
-		<portfolio-panel></portfolio-panel>
-		<contact-panel></contact-panel>
+		<about-panel id="aboutPanel"></about-panel>
+		<portfolio-panel id="portfolioPanel"></portfolio-panel>
+		<contact-panel id="contactPanel"></contact-panel>
 	`
 })
 export class AppComponent  {}

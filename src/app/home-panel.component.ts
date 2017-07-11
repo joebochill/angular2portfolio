@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import animateScrollTo from 'animated-scroll-to';
 
 @Component({
 	selector: 'home-panel',
@@ -7,10 +8,10 @@ import {Component} from '@angular/core';
             <div class="shadowBox">
             	<div class="homeText">
 	                <div class="navBar">
-	                	<div>ABOUT</div> / 
-	                	<div>PORTFOLIO</div> / 
-	                	<div>CONTACT</div> /
-	                	<div class="icon download">R&Eacute;SUM&Eacute;</div>
+	                	<div (click)="_scrollIntoView('aboutPanel')">ABOUT</div> / 
+	                	<div (click)="_scrollIntoView('portfolioPanel')">PORTFOLIO</div> / 
+	                	<div (click)="_scrollIntoView('contactPanel')">CONTACT</div> /
+	                	<div (click)="_openLink('/resume/Boyle_Joseph_Resume.pdf')" class="icon download">R&Eacute;SUM&Eacute;</div>
                 	</div>
 	                <div class="nameBar">JOSEPH P. BOYLE</div>
 	                <div class="roleBar">USER EXPERIENCE ENGINEER</div>
@@ -21,4 +22,11 @@ import {Component} from '@angular/core';
 	styleUrls: ['./home-panel.component.css']
 })
 
-export class HomePanelComponent{}
+export class HomePanelComponent{
+	private _scrollIntoView(panel:string){
+		animateScrollTo(document.getElementById(panel).offsetTop)
+	}
+	private _openLink(url:string){
+		window.open(url, "_blank");
+	}
+}
