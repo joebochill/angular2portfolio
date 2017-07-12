@@ -7,6 +7,9 @@
 *.js
 *.js.map
 
+# api scripts
+*.php
+
 # dependencies
 /node_modules
 
