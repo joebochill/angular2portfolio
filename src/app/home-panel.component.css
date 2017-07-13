@@ -64,7 +64,7 @@
 .icon.download{
 	padding-left: 1.5rem;
 	display: inline-block;
-	background-image: url('../images/download.svg');
+	background-image: url('../images/icons/download.svg');
 	background-size: 1rem 1rem;
 	background-position: left center;
 	background-repeat: no-repeat;

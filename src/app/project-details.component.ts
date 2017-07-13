@@ -1,4 +1,5 @@
-import {Component, Input} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {PortfolioService} from './portfolio.service'; 
 
 @Component({
 	selector: 'project-details',
@@ -52,13 +53,30 @@ import {Component, Input} from '@angular/core';
 	styleUrls:['./project-details.component.css']
 })
 
-export class ProjectDetailsComponent{
+export class ProjectDetailsComponent implements OnInit{
 	@Input() project: number=-1;
 	@Input() selected: boolean=false;
+	education: Object;
+	errorMessage: any;
+
+	constructor(private portfolioService: PortfolioService){}
+
+	getEducation(): void{
+		this.portfolioService.getEducation()
+								.subscribe(
+									education => this.education = education,
+									error => this.errorMessage = <any>error
+								);
+	}
+
 	public openLink(){
 	    window.open("http://www.google.com", "_blank");
 	};
 	private toggle(){
 	    this.selected = !this.selected;
 	};
+
+	ngOnInit(): void{
+		this.getEducation();
+	}
 }
