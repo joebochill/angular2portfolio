@@ -7,16 +7,35 @@ import 'rxjs/add/operator/map';
 
 @Injectable()
 export class PortfolioService{
-	private url = 
-	'http://www.josephpboyle.com/api/portfolioAPI.php?type=images&id=1'; //URL to web API
+	private url = 'http://www.josephpboyle.com/api/portfolioAPI.php?'; //URL to web API
 
 	constructor(private http: Http){}
 
+	//API Calls to get DB information
 	getEducation(): Observable<Object>{
-		return this.http.get(this.url)
-						.map(this.extractData)
-						.catch(this.handleError);
+		return this.http.get(this.url+'type=about&data=education')
+			.map(this.extractData)
+			.catch(this.handleError);
 	}
+	getEmployment(): Observable<Object>{
+		return this.http.get(this.url+'type=about&data=employment')
+			.map(this.extractData)
+			.catch(this.handleError);
+	}
+	getSkills(): Observable<Object>{
+		return this.http.get(this.url+'type=about&data=skills')
+			.map(this.extractData)
+			.catch(this.handleError);
+	}
+
+	getSampleProject(): Observable<Object>{
+		return this.http.get(this.url+'type=project&id=1')
+			.map(this.extractData)
+			.catch(this.handleError);
+	}
+
+
+	//Utility Functions
 	private extractData(res: Response){
 		let body = res.json();
 		return body.data || {};

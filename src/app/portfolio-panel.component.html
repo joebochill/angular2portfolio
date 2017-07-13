@@ -3,9 +3,8 @@
       	<div>PORTFOLIO</div>
       </div>
       <div class="sectionBody">
-      	<info-blurb noimage>
-      		<div style="font-size:1.5rem">I have extensive experience across a wide range of different projects. Below you will find some highlights of some of my recent work. </div>
-      	</info-blurb>
+      	<info-blurb type="plain" [data]="'I have extensive experience across a wide range of different projects. Below you will find some highlights of some of my recent work.'"></info-blurb>
+            <info-blurb type="project" [data]="sampleproject"></info-blurb>
       	<info-blurb imageUrl="url('../images/thumbs/pxblue.png')">
       		<div>
       			<h1>Foreseer</h1>

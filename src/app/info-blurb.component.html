@@ -1,0 +1,64 @@
+<div *ngIf="type=='plain' && data" class="blurbBody">
+	<div class="blurbContent">
+		<div>{{data}}</div>
+	</div>
+</div>
+
+<div *ngIf="type=='education' && data" class="blurbBody">
+	<div class="blurbImage" style="background-image:url('../images/icons/education.svg');"></div>
+	<div class="blurbContent">
+		<div *ngFor="let edu of data" class="itemWrapper">
+			<h1>{{edu.degree}}</h1>
+  			<h2>{{edu.school}}, {{edu.year}}</h2>
+  			<h3 *ngIf="edu.notes">{{edu.notes}}</h3>
+  		</div>
+	</div>
+</div>
+
+<div *ngIf="type=='employment' && data" class="blurbBody">
+	<div class="blurbImage" style="background-image:url('../images/icons/experience.svg');"></div>
+	<div class="blurbContent">
+		<div *ngFor="let exp of data" class="itemWrapper">
+			<h1>{{exp.title}}</h1>
+  			<h2>{{exp.company}}, {{exp.start}}{{exp.end? "-" + exp.end:""}}</h2>
+  		</div>
+	</div>
+</div>
+
+<div *ngIf="type=='skills' && data" class="blurbBody">
+	<div class="blurbImage" style="background-image:url('../images/icons/skills.svg');"></div>
+	<div class="blurbContent">
+		<div *ngIf="data.programming" class="itemWrapper">
+			<h1>Programming</h1>
+  			<h2>{{data.programming.join(", ")}}</h2>
+  		</div>
+  		<div *ngIf="data.hci" class="itemWrapper">
+			<h1>HCI Methods</h1>
+  			<h2>{{data.hci.join(", ")}}</h2>
+  		</div>
+	</div>
+</div>
+
+<div *ngIf="type=='project' && data" class="blurbBody">
+	<div class="blurbImage" [style.background-image]="'url('+data.thumb+')'"></div>
+	<div class="blurbContent">
+		<h1>{{data.name}}</h1>
+		<h2>{{data.description}}</h2>
+  		<project-details></project-details>
+	</div>
+</div>
+
+
+
+<div *ngIf="
+	type!='education' && 
+	type!='employment' && 
+	type!='skills' && 
+	type!='plain' && 
+	type!='project'" 
+	class="blurbBody">
+	<div *ngIf="imageUrl" class="blurbImage" [style.background-image]="imageUrl"></div>
+	<div class="blurbContent">
+		<ng-content></ng-content>
+	</div>
+</div>
