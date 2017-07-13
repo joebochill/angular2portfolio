@@ -28,8 +28,8 @@ export class PortfolioService{
 			.catch(this.handleError);
 	}
 
-	getSampleProject(): Observable<Object>{
-		return this.http.get(this.url+'type=project&id=1')
+	getSampleProject(id:number): Observable<Object>{
+		return this.http.get(this.url+'type=project&id='+id)
 			.map(this.extractData)
 			.catch(this.handleError);
 	}
