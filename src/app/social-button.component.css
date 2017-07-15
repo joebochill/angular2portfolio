@@ -10,11 +10,11 @@
 	margin: 0 0.5rem;
 }
 :host[email] .socialButton{
-	cursor: default;
+	/*cursor: default;*/
 	border: .2rem solid #171717;
 	background-size: 50% 50%;
 }
-:host[email] .socialButton:after{
+/*:host[email] .socialButton:after{
 	content:'';
 	position: absolute;
 	width: .1rem;
@@ -22,7 +22,7 @@
 	height: 4rem;
 	left: 50%;
 	top: calc(100% + .2rem);
-}
+}*/
 .socialButton > .lighten{
 	height: 100%;
 	width: 100%;
@@ -33,5 +33,10 @@
 .socialButton:hover > .lighten{
 	opacity: 0.05;
 }
+:host[email] .socialButton:hover{
+	border-color: #378de8;
+	background-image: url('../images/icons/social/email-blue.svg')!important;
+}
 :host[email] .socialButton > .lighten{
 	display: none;
+}

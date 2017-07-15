@@ -18,7 +18,7 @@
     margin: 0 auto;
     max-width: 75rem;
 }
-.emailForm{
+/*.emailForm{
 	border: 0.2rem solid #171717;
 	padding: 1rem;
 }
@@ -39,8 +39,8 @@
 	font-family: 'DIN_Cond', sans-serif;
 	font-size: 1.5rem;
 	min-width: 8rem;
-}
-input{
+}*/
+/*input{
 	font-family: 'DIN', sans-serif;
 	font-weight: 800;
 	height: 3rem;
@@ -86,11 +86,11 @@ h1{
 }
 .sendButton:active,.sendButton:active:hover{
     background: linear-gradient(to bottom, rgba(33, 146, 230, 0.4), rgba(33, 146, 230, 0.9));
-}
+}*/
 .footer{
 	width:100%;
 	text-align:center;
-	margin-top:4rem;
+	/*margin-top:4rem;*/
 	font-size: 1.2rem;
 }
 .contactButtons{
