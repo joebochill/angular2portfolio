@@ -95,19 +95,33 @@ a:hover, /deep/ a:hover{
 .blurbBody:not(.expanded) project-details{
 	display: none;
 }
-/*.blurbExpander{
-	height: 8rem;
-	width: 8rem;
-	flex: 0 0 auto;
-	margin-left: 2rem;
-}
-:hos[reverse] .blurbExpander{
-	margin-left: 0;
-	margin-right: 2rem;
-}*/
 .toggleWrapper{
 	text-align:center;
 	margin-top: 1rem;
+	cursor: pointer;
+	display: flex;
+	flex-direction: column-reverse;
+	align-items: center;
+}
+.blurbBody.expanded .toggleWrapper{
+	flex-direction: column;
+}
+.blurbHeader:hover a{
+	text-decoration: underline;
+}
+.toggleIcon{
+	width: 1rem;
+	height: 1rem;
+	background: url('../images/icons/expand.svg');
+	background-size: 100%;
+	background-repeat: no-repeat;
+	transition: transform 300ms ease-in-out;
+	margin-top:.5rem;
+}
+.blurbBody.expanded .toggleIcon{
+	margin-top:0;
+	margin-bottom: .5rem;
+	transform: rotate(180deg);
 }
 .showHide{
 	display: inline-block;
