@@ -20,9 +20,10 @@
 	width: 8rem;
 	flex: 0 0 auto;
 	margin-right: 2rem;
-	background-size: 8rem 8rem;
+	background-size: 100% 100%;
 	background-position: center;
 	background-repeat: no-repeat;
+	border-radius: 50%;
 }
 :host[small] .blurbImage{
 	background-size: 4rem 4rem;
@@ -79,52 +80,38 @@ p:last-child{
 :host[reverse] h1{
 	text-align: right;
 }
-a{
+a, /deep/ a{
 	text-decoration: none;
 	font-weight: 800;
 	color: inherit;
 	cursor: pointer;
 }
-a:hover{
+a:hover, /deep/ a:hover{
 	text-decoration: underline;
 }
-
-:host /deep/ h1{
-	margin: 0;
-	font-size: 1.5rem;
-	font-weight: 800;
+.blurbBody:not(.expanded) project-details{
+	display: none;
 }
-:host /deep/ h1:not(:first-child){
-	margin-top: 1rem;
+.toggleWrapper{
+	text-align:right;
+	margin-top: 1.5rem;
 }
-:host /deep/ h2{
-	margin: 0;
-	font-size: 1.5rem;
-	font-weight: normal;
-	text-align: justify;
+.showHide{
+	display: inline-block;
+    font-size: 1.25rem;
+    line-height: 1rem;
+    font-weight: 800;
+    color: #378de8;
+    user-select: none;
+    cursor: pointer;
+    text-decoration: none;
 }
-:host /deep/ h3{
-	margin: 0;
-	font-size: 1rem;
-	font-weight: normal;
-	text-align: justify;
-}
-:host /deep/ p{
-	margin: 0;
-	margin-bottom: 1rem;
-}
-:host /deep/ p:last-child{
-	margin-bottom: 0;
-}
-:host[reverse] /deep/ h1{
-	text-align: right;
-} 
-:host /deep/ a{
-	text-decoration: none;
-	font-weight: 800;
-	color: inherit;
-	cursor: pointer;
-}
-:host /deep/ a:hover{
+.showHide:hover{
 	text-decoration: underline;
+}
+.blurbBody:not(.expanded) /deep/ p:not(:first-child){
+	display: none;
+}
+.blurbBody:not(.expanded) /deep/ p:first-child{
+	margin-bottom: 0px;
 }

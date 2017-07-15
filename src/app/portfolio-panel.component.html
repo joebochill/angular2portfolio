@@ -3,14 +3,7 @@
       	<div>PORTFOLIO</div>
       </div>
       <div class="sectionBody">
-      	<info-blurb type="plain" [data]="'I have extensive experience across a wide range of different projects. Below you will find some highlights of some of my recent work.'"></info-blurb>
-            <info-blurb type="project" [data]="sampleprojects[1]"></info-blurb>
-            <info-blurb reverse type="project" [data]="sampleprojects[2]"></info-blurb>
-            <info-blurb type="project" [data]="sampleprojects[3]"></info-blurb>
-            <info-blurb reverse type="project" [data]="sampleprojects[4]"></info-blurb>
-            <info-blurb type="project" [data]="sampleprojects[5]"></info-blurb>
-            <info-blurb reverse type="project" [data]="sampleprojects[6]"></info-blurb>
-            <info-blurb type="project" [data]="sampleprojects[7]"></info-blurb>
-            <info-blurb reverse type="project" [data]="sampleprojects[8]"></info-blurb>
+       	<info-blurb type="plain" [data]="'I have extensive experience across a wide range of different projects. Below you will find some highlights of some of my recent work.'"></info-blurb>
+            <info-blurb *ngFor="let project of projectInfo; let e=even;" type="project" [data]="project" [attr.reverse]="e?null:''"></info-blurb>
       </div>
 </section>

@@ -11,6 +11,7 @@ export class PortfolioService{
 
 	constructor(private http: Http){}
 
+
 	//API Calls to get DB information
 	getEducation(): Observable<Object>{
 		return this.http.get(this.url+'type=about&data=education')
@@ -27,9 +28,23 @@ export class PortfolioService{
 			.map(this.extractData)
 			.catch(this.handleError);
 	}
-
-	getSampleProject(id:number): Observable<Object>{
-		return this.http.get(this.url+'type=project&id='+id)
+	// getVisibleProjects(): Observable<number[]>{
+	// 	return this.http.get(this.url+'type=list')
+	// 		.map(this.extractData)
+	// 		.catch(this.handleError);
+	// }
+	// getProjectOverview(id:number): Observable<Object>{
+	// 	return this.http.get(this.url+'type=project&id='+id)
+	// 		.map(this.extractData)
+	// 		.catch(this.handleError);
+	// }
+	// getProjectDetails(id:number): Observable<Object>{
+	// 	return this.http.get(this.url+'type=details&id='+id)
+	// 		.map(this.extractData)
+	// 		.catch(this.handleError);
+	// }
+	getAllProjectInfo(): Observable<Object>{
+		return this.http.get(this.url+'type=allprojectinfo')
 			.map(this.extractData)
 			.catch(this.handleError);
 	}

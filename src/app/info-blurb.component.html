@@ -39,12 +39,15 @@
 	</div>
 </div>
 
-<div *ngIf="type=='project' && data" class="blurbBody">
-	<div class="blurbImage" [style.background-image]="'url('+data.thumb+')'"></div>
+<div *ngIf="type=='project' && data" [ngClass]="{'blurbBody':true,'expanded':expanded}">
+	<div class="blurbImage" [style.background-image]="'url('+data.overview.thumb+')'"></div>
 	<div class="blurbContent">
-		<h1>{{data.name}}</h1>
-		<h2>{{data.description}}</h2>
-  		<project-details></project-details>
+		<h1>{{data.overview.name}}</h1>
+		<h2 [innerHtml]="data.overview.description"></h2>
+		<div class="toggleWrapper">
+			<a class="showHide" (click)="toggle()">{{expanded?'Hide Details':'Show Details'}}</a>
+		</div>
+  		<project-details [images]="data.images" [details]="data.details"></project-details>
 	</div>
 </div>
 

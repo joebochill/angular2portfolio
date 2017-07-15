@@ -9,4 +9,9 @@ import {Component, Input} from '@angular/core';
 export class InfoBlurbComponent{
 	@Input() type: string = '';
 	@Input() data: Object = {};
+	@Input() expanded: boolean=false;
+
+	private toggle(){
+	    this.expanded = !this.expanded;
+	};
 }

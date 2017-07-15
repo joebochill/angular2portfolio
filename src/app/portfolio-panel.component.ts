@@ -7,26 +7,24 @@ import {PortfolioService} from './portfolio.service';
 	styleUrls: ['./portfolio-panel.component.css']
 })
 
-export class PortfolioPanelComponent{
+export class PortfolioPanelComponent implements OnInit{
 	constructor(private portfolioService: PortfolioService){}
 
 	//local vars
 	@Input() project_id: number=-1;
-	sampleprojects:Array<Object>=[];
+	projectInfo: Object;
 	errorMessage: any;
 
-	//retrieve the sample project object from the DB API
-	getSampleProject(id:number): void{
-		this.portfolioService.getSampleProject(id)
+	//retrieve the project data via the API
+	getProjectInfo(): void{
+		this.portfolioService.getAllProjectInfo()
 			.subscribe(
-				project => this.sampleprojects[id] = project,
+				projectInfo => this.projectInfo = projectInfo,
 				error => this.errorMessage = <any>error
 			);
 	}
 
 	ngOnInit(): void{
-		for(let i=1; i<=8; i++){
-			this.getSampleProject(i);
-		}
+		this.getProjectInfo();
 	}
 }
