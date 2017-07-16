@@ -110,6 +110,12 @@
 		padding: 0;
 		font-size: 1.5rem;
 	}
+	:host[type="loading"] .blurbContent{
+		padding: 0;
+		font-size: 1.5rem;
+		text-align: center;
+		font-weight: 800;
+	}
 	:host[type='project'] .blurbContent{ /* this is used when the show/hide is at the bottom of the section */
 		margin-bottom: 4rem;
 	}

@@ -4,6 +4,7 @@
       </div>
       <div class="sectionBody">
        	<info-blurb type="plain" [data]="'I have worked on blah blah blah. TODO: Update this to sound better. Below you will find some highlights of some of my recent work.'"></info-blurb>
+        <info-blurb *ngIf="projectInfo" type="loading" [data]="'Please wait, loading data...'"></info-blurb>
         <info-blurb *ngFor="let project of projectInfo; let e=even;" type="project" [data]="project" [attr.reverse]="e?null:''"></info-blurb>
       </div>
 </section>

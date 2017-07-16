@@ -1,4 +1,4 @@
-<div *ngIf="type=='plain' && data" class="blurbBody">
+<div *ngIf="(type=='plain' || type=='loading') && data" class="blurbBody">
 	<div class="blurbContent">
 		<div>{{data}}</div>
 	</div>
@@ -73,6 +73,7 @@
 	type!='employment' && 
 	type!='skills' && 
 	type!='plain' && 
+	type!='loading' &&
 	type!='project'" 
 	class="blurbBody">
 	<div *ngIf="imageUrl" class="blurbImage" [style.background-image]="imageUrl"></div>

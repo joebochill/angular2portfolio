@@ -4,6 +4,7 @@
       </div>
       <div class="sectionBody">
       	<info-blurb type="plain" [data]="'As a UX Engineer, I bridge the gap between designers and developers. I pride myself on my ability to find clever solutions to complex design and programming problems. I’ve worked on software products spanning embedded, mobile, and desktop applications, consistently delivering exceptional results. I adapt quickly and am not afraid to jump into unfamiliar territory and learn new skills.'"></info-blurb>
+      	<info-blurb *ngIf="!education || !employment || !skills" type="loading" [data]="'Please wait, loading data...'"></info-blurb>
       	<info-blurb *ngIf="education" type="education" [data]="education" medium></info-blurb>
       	<info-blurb *ngIf="employment" type="employment" [data]="employment" small></info-blurb>
       	<info-blurb *ngIf="skills" type="skills" [data]="skills" small></info-blurb>
