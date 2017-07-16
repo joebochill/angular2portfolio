@@ -39,3 +39,9 @@
 		flex-direction: column;
 	}
 }
+@media (max-width: 350px){
+	.sectionTitle{
+		font-size: 4rem;
+		line-height: 4rem;
+	}
+}

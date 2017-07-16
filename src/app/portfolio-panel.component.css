@@ -18,3 +18,10 @@
     margin: 0 auto;
     max-width: 75rem;
 }
+
+@media (max-width: 350px){
+    .sectionTitle{
+        font-size: 4rem;
+        line-height: 4rem;
+    }
+}
