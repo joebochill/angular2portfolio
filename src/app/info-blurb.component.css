@@ -53,7 +53,6 @@
 		    left: 50%;
 		    transform: translateX(-50%);
 		    bottom: 2rem;
-		    width: 100%;
 		}
 		:host[type='project']:last-child .blurbExpander{
 			bottom: 0px;
@@ -91,6 +90,7 @@
 			    user-select: none;
 			    cursor: pointer;
 			    text-decoration: none;
+			    white-space: nowrap;
 			}
 			.blurbHeader:hover .showHide{
 				text-decoration: underline;
