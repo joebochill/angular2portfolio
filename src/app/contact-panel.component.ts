@@ -1,4 +1,5 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {DatePipe} from '@angular/common';
 
 @Component({
 	selector: 'contact-panel',
@@ -6,4 +7,10 @@ import {Component} from '@angular/core';
 	styleUrls: ['./contact-panel.component.css']
 })
 
-export class ContactPanelComponent{}
+export class ContactPanelComponent implements OnInit{
+	private currentDate: Date;
+
+	ngOnInit(){
+		this.currentDate = new Date();
+	}
+}
