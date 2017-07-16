@@ -28,12 +28,13 @@
 }
 .navBar{
 	font-size: 1.5rem;
-	line-height: 1.5rem;
+	line-height: 1.7rem;
 	font-weight: lighter;
 	padding-left: 2rem;
 	color: rgba(255,255,255,.7);
 	display: flex;
 	flex-direction: row;
+	flex-wrap: wrap;
 	align-items: center;
 }
 .navBar > div{
@@ -44,6 +45,9 @@
 }
 .navBar > div:first-child{
 	margin-left: 0;
+}
+.navBar > div:last-child{
+	margin-right: 0;
 }
 .navBar > div:hover{
 	color: white;
@@ -70,4 +74,37 @@
 	background-repeat: no-repeat;
 	color: white;
 	opacity: 0.7;
+}
+
+/* RESPONSIVE STYLING */
+@media (max-width: 780px){
+	.nameBar{
+		font-size: 7rem;
+		line-height: 5.5rem;
+	}
+	.navBar{
+		padding-left: 1.5rem;
+	}
+	.roleBar{
+		font-size: 1.5rem;
+		line-height: 1.7rem;
+	}
+}
+@media (max-width: 555px){
+	.homeText{
+		align-items: flex-end;
+	}
+	.nameBar, .roleBar{
+		text-align: right;
+	}
+	.navBar{
+		justify-content: flex-end;
+		text-align: right;
+	}
+}
+@media (max-width: 350px){
+	.nameBar{
+		font-size: 5rem;
+		line-height: 4rem;
+	}
 }
