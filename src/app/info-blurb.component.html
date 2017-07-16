@@ -56,10 +56,13 @@
 		</div>
 	</div>
 	<div class="blurbContent">
-		<h1>{{data.overview.name}}</h1>
-		<h2 [innerHtml]="data.overview.description"></h2>
-		
-  		<project-details [images]="data.images" [details]="data.details"></project-details>
+		<div class="itemWrapper">
+			<h1>{{data.overview.name}}</h1>
+			<h2 [innerHtml]="data.overview.description"></h2>
+		</div>
+		<div class="itemWrapper">
+  			<project-details [images]="data.images" [details]="data.details"></project-details>
+  		</div>
 	</div>
 </div>
 

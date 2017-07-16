@@ -1,48 +1,66 @@
-.detailsContainer{
-	display: flex;
-	flex-direction: row;
-	align-items: flex-start;
-	margin-top: 1.5rem;
+/* Wraps the entire details including subsequent paragraphs*/
+.detailsWrapper{
+	height: 0px;
+	overflow: hidden;
+	margin-top: 0px;
+	transition: height 400ms ease-in-out, margin-top 400ms ease-in-out;
 }
-.projectStats{
-	padding: 1rem;
-	background: #e5e5e5;
-	flex: 0 0 auto;
-	min-width: 20rem;
-	max-width: 25rem;
-	margin-top: 0.5rem;
-}
-.itemWrapper:not(:first-child){
-	margin-top: 1rem;
-}
-h1{
-	text-align: left;
-	margin: 0;
-	font-size: 1.5rem;
-	font-weight: 800;
-}
-h2{
-	margin: 0;
-	font-size: 1.5rem;
-	font-weight: normal;
-	text-align: left;
-	margin-left: 1.5rem;
-	text-indent: -1.5rem;
-}
-.photosWrapper{
-	flex: 1 1 0px;
-	display: flex;
-	flex-direction: row;
-	align-items: flex-start;
-	flex-wrap: wrap;
-}
-.projectPhoto{
-	flex: 1 1 0px;
-	min-width: 10rem;
-	margin: .5rem 0 .5rem 1rem;
-	cursor: pointer;
-}
-.projectPhoto > img{
-	width: 100%;
-	display: block;
-}
+	/* The subsequent paragraphs after intro */
+
+	/* Contains the stats and the images */
+	.detailsContainer{
+		display: flex;
+		flex-direction: row;
+		align-items: flex-start;
+		margin-top: 1rem;
+	}
+
+		/* Stats Side Panel */
+		.projectStats{
+			padding: 1rem;
+			background: #e5e5e5;
+			flex: 0 0 auto;
+			min-width: 20rem;
+			max-width: 25rem;
+			margin-top: 0.5rem;
+		}
+			/* Each item in stats panel */
+			.itemWrapper:not(:first-child){
+				margin-top: 1rem;
+			}
+				h1{
+					text-align: left;
+					margin: 0;
+					font-size: 1.5rem;
+					font-weight: 800;
+				}
+				h2{
+					margin: 0;
+					font-size: 1.5rem;
+					font-weight: normal;
+					text-align: left;
+					/*margin-left: 1.5rem;
+					text-indent: -1.5rem;*/
+				}
+				.itemWrapper h2{
+					margin-left: 1.5rem;
+					text-indent: -1.5rem;
+				}
+		/* Wraps the photos gallery */
+		.photosWrapper{
+			flex: 1 1 0px;
+			display: flex;
+			flex-direction: row;
+			align-items: flex-start;
+			flex-wrap: wrap;
+		}
+			.projectPhoto{
+				flex: 1 1 0px;
+				min-width: 10rem;
+				margin: .5rem 0 .5rem 1rem;
+				cursor: pointer;
+			}
+				.projectPhoto > img{
+					width: 100%;
+					display: block;
+				}

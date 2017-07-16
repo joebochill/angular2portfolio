@@ -1,3 +1,4 @@
+/* Wraps the info blurb */
 .blurbBody{
 	display: flex;
     flex-direction: row;
@@ -15,130 +16,130 @@
 :host[reverse] .blurbBody{
     flex-direction: row-reverse;
 }
-.blurbHeader{
-	margin-right: 2rem;
-}
-.blurbImage{
-	height: 8rem;
-	width: 8rem;
-	flex: 0 0 auto;
-	background-size: 100% 100%;
-	background-position: center;
-	background-repeat: no-repeat;
-	border-radius: 50%;
-}
-:host[small] .blurbImage{
-	background-size: 4rem 4rem;
-	background-position: top center;
-}
-:host[medium] .blurbImage{
-	background-size: 5rem 5rem;
-	background-position: top center;
-}
-:host[reverse] .blurbHeader{
-	margin-right: 0;
-	margin-left: 2rem;
-}
-.blurbContent{
-	padding-right: 10rem;
-	flex: 1 1 0px;
-	min-width: 0px;
-}
-:host[reverse] .blurbContent{
-	padding-right: 0;
-	padding-left: 10rem;
-}
 
-:host[type="plain"] .blurbContent{
-	padding: 0;
-	font-size: 1.5rem;
-}
-.itemWrapper:not(:first-child){
-	margin-top: 1rem;
-}
-h1{
-	margin: 0;
-	font-size: 1.5rem;
-	font-weight: 800;
-}
-h2{
-	margin: 0;
-	font-size: 1.5rem;
-	font-weight: normal;
-	text-align: justify;
-}
-h3{
-	margin: 0;
-	font-size: 1rem;
-	font-weight: normal;
-	text-align: justify;
-}
-p{
-	margin: 0;
-	margin-bottom: 1rem;
-}
-p:last-child{
-	margin-bottom: 0px;
-}
-:host[reverse] h1{
-	text-align: right;
-}
-a, /deep/ a{
-	text-decoration: none;
-	font-weight: 800;
-	color: inherit;
-	cursor: pointer;
-}
-a:hover, /deep/ a:hover{
-	text-decoration: underline;
-}
-.blurbBody:not(.expanded) project-details{
-	display: none;
-}
-.toggleWrapper{
-	text-align:center;
-	margin-top: 1rem;
-	cursor: pointer;
-	display: flex;
-	flex-direction: column-reverse;
-	align-items: center;
-}
-.blurbBody.expanded .toggleWrapper{
-	flex-direction: column;
-}
-.blurbHeader:hover a{
-	text-decoration: underline;
-}
-.toggleIcon{
-	width: 1rem;
-	height: 1rem;
-	background: url('../images/icons/expand.svg');
-	background-size: 100%;
-	background-repeat: no-repeat;
-	transition: transform 300ms ease-in-out;
-	margin-top:.5rem;
-}
-.blurbBody.expanded .toggleIcon{
-	margin-top:0;
-	margin-bottom: .5rem;
-	transform: rotate(180deg);
-}
-.showHide{
-	display: inline-block;
-    font-size: 1.25rem;
-    line-height: 1rem;
-    font-weight: 800;
-    color: #378de8;
-    user-select: none;
-    cursor: pointer;
-    text-decoration: none;
-}
-.showHide:hover{
-	text-decoration: underline;
-}
-.blurbBody:not(.expanded) /deep/ p:not(:first-child){
-	display: none;
-}
-.blurbBody:not(.expanded) /deep/ p:first-child{
-	margin-bottom: 0px;
-}
+	/* Header contains the image and the toggle */
+	.blurbHeader{
+		margin-right: 2rem;
+	}
+	:host[reverse] .blurbHeader{
+		margin-right: 0;
+		margin-left: 2rem;
+	}
+		/* contains the main image */
+		.blurbImage{
+			height: 8rem;
+			width: 8rem;
+			flex: 0 0 auto;
+			background-size: 100% 100%;
+			background-position: center;
+			background-repeat: no-repeat;
+			border-radius: 50%;
+		}
+		:host[small] .blurbImage{
+			background-size: 4rem 4rem;
+			background-position: top center;
+		}
+		:host[medium] .blurbImage{
+			background-size: 5rem 5rem;
+			background-position: top center;
+		}
+
+		/*Contains the toggle button to open/close */
+		.toggleWrapper{
+			text-align:center;
+			margin-top: 1rem;
+			cursor: pointer;
+			display: flex;
+			flex-direction: column-reverse;
+			align-items: center;
+		}
+		.blurbBody.expanded .toggleWrapper{
+			flex-direction: column;
+		}
+			.toggleIcon{
+				width: 1rem;
+				height: 1rem;
+				background: url('../images/icons/expand.svg');
+				background-size: 100%;
+				background-repeat: no-repeat;
+				transition: transform 400ms ease-in-out;
+				margin-top:.5rem;
+			}
+			.blurbBody.expanded .toggleIcon{
+				margin-top:0;
+				margin-bottom: .5rem;
+				transform: rotate(180deg);
+			}
+			.showHide{
+				display: inline-block;
+			    font-size: 1.25rem;
+			    line-height: 1rem;
+			    font-weight: 800;
+			    color: #378de8;
+			    user-select: none;
+			    cursor: pointer;
+			    text-decoration: none;
+			}
+			.blurbHeader:hover .showHide{
+				text-decoration: underline;
+			}
+
+	/* BlurbContent contains the overview and the deatils panel */
+	.blurbContent{
+		padding-right: 10rem;
+		flex: 1 1 0px;
+		min-width: 0px;
+	}
+	:host[reverse] .blurbContent{
+		padding-right: 0;
+		padding-left: 10rem;
+	}
+	:host[type="plain"] .blurbContent{
+		padding: 0;
+		font-size: 1.5rem;
+	}
+
+		/* Item wrapper wraps each item (h1/h2) in the blurb */
+		.itemWrapper:not(:first-child){
+			margin-top: 1rem;
+		}
+		:host([type="project"]) .itemWrapper:last-child{
+			margin-top: 0;
+		}
+			h1{
+				margin: 0;
+				font-size: 1.5rem;
+				font-weight: 800;
+				user-select: none;
+			}
+			:host[reverse] h1{
+				text-align: right;
+			}
+			h2{
+				margin: 0;
+				font-size: 1.5rem;
+				font-weight: normal;
+				text-align: justify;
+			}
+			h3{
+				margin: 0;
+				font-size: 1rem;
+				font-weight: normal;
+				text-align: justify;
+			}
+			/* pragraphs are passed as content from the db */
+			:host /deep/ p{
+				margin:0 0 1rem 0;
+			}
+			:host /deep/ p:last-child{
+				margin: 0;
+			}
+			:host /deep/ a{
+				text-decoration: none;
+				font-weight: 800;
+				color: inherit;
+				cursor: pointer;
+			}
+			:host /deep/ a:hover{
+				text-decoration: underline;
+			}

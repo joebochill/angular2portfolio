@@ -1,38 +1,40 @@
-
-<div class="detailsContainer">
-	<div class="projectStats">
-		<div *ngIf="details.time" class="itemWrapper">
-			<h1>Time Frame</h1>
-			<h2 *ngFor="let item of details.time">{{item}}</h2>
+<div class="detailsWrapper">
+	<h2 class="fullText" [innerHtml]="details.fulltext"></h2>
+	<div class="detailsContainer">
+		<div class="projectStats">
+			<div *ngIf="details.time" class="itemWrapper">
+				<h1>Time Frame</h1>
+				<h2 *ngFor="let item of details.time">{{item}}</h2>
+			</div>
+			<div *ngIf="details.goals" class="itemWrapper">
+				<h1>Project Goals</h1>
+				<h2 *ngFor="let item of details.goals">{{item}}</h2>
+			</div>
+			<div *ngIf="details.deliverables" class="itemWrapper">
+				<h1>Deliverables</h1>
+				<h2 *ngFor="let item of details.deliverables">{{item}}</h2>
+			</div>
+			<div *ngIf="details.team" class="itemWrapper">
+				<h1>Team</h1>
+				<h2 *ngFor="let item of details.team">{{item}}</h2>
+			</div>
+			<div *ngIf="details.responsibilities" class="itemWrapper">
+				<h1>My Responsibilities</h1>
+				<h2 *ngFor="let item of details.responsibilities">{{item}}</h2>
+			</div>
+			<div *ngIf="details.tech" class="itemWrapper">
+				<h1>Technology Stack</h1>
+				<h2 *ngFor="let item of details.tech">{{item}}</h2>
+			</div>
+			<div *ngIf="details.ux" class="itemWrapper">
+				<h1>UX Stack</h1>
+				<h2 *ngFor="let item of details.ux">{{item}}</h2>
+			</div>
 		</div>
-		<div *ngIf="details.goals" class="itemWrapper">
-			<h1>Project Goals</h1>
-			<h2 *ngFor="let item of details.goals">{{item}}</h2>
-		</div>
-		<div *ngIf="details.deliverables" class="itemWrapper">
-			<h1>Deliverables</h1>
-			<h2 *ngFor="let item of details.deliverables">{{item}}</h2>
-		</div>
-		<div *ngIf="details.team" class="itemWrapper">
-			<h1>Team</h1>
-			<h2 *ngFor="let item of details.team">{{item}}</h2>
-		</div>
-		<div *ngIf="details.responsibilities" class="itemWrapper">
-			<h1>My Responsibilities</h1>
-			<h2 *ngFor="let item of details.responsibilities">{{item}}</h2>
-		</div>
-		<div *ngIf="details.tech" class="itemWrapper">
-			<h1>Technology Stack</h1>
-			<h2 *ngFor="let item of details.tech">{{item}}</h2>
-		</div>
-		<div *ngIf="details.ux" class="itemWrapper">
-			<h1>UX Stack</h1>
-			<h2 *ngFor="let item of details.ux">{{item}}</h2>
-		</div>
-	</div>
-	<div class="photosWrapper">
-		<div *ngFor="let image of images" class="projectPhoto" (click)="openLink(image.dest)">
-			<img src={{image.source}}/>
+		<div class="photosWrapper">
+			<div *ngFor="let image of images" class="projectPhoto" (click)="openLink(image.dest)">
+				<img src={{image.source}}/>
+			</div>
 		</div>
 	</div>
 </div>
