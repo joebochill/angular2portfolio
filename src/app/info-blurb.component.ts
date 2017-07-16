@@ -17,7 +17,7 @@ export class InfoBlurbComponent implements AfterViewInit{
 	scrollOptions = {
 	  speed: 500,
 	  minDuration: 400,
-	  maxDuration: 1500,
+	  maxDuration: 400,
 	  element: window,
 	  cancelOnUserAction: true
 	};

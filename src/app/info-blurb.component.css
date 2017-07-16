@@ -193,6 +193,9 @@
 	h1, :host[reverse] h1, h2, h3{
 		text-align: center;
 	}
+	:host[type='project'] h1{
+		margin: 1rem 0;
+	}
 	:host[type='project'] h2{
 		text-align: left;
 	}
