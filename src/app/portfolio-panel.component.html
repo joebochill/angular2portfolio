@@ -3,7 +3,7 @@
       	<div>WHAT I'VE DONE</div>
       </div>
       <div class="sectionBody">
-       	<info-blurb type="plain" [data]="'I have worked on blah blah blah. TODO: Update this to sound better. Below you will find some highlights of some of my recent work.'"></info-blurb>
+       	<info-blurb type="plain" [data]="'I have worked on a wide assortment of different projects, spanning research, design, and development. I\'ve done work for independent business owners, startups, and Fortune 500 companies. Below are some highlights of my recent work.'"></info-blurb>
         <info-blurb *ngIf="!projectInfo" type="loading" [data]="'Please wait, loading data...'"></info-blurb>
         <info-blurb *ngFor="let project of projectInfo; let e=even;" type="project" [data]="project" [attr.reverse]="e?null:''"></info-blurb>
       </div>
