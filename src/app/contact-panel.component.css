@@ -24,11 +24,12 @@
 	font-size: 1.2rem;
 }
 .contactButtons{
-	display: flex;
+/*	display: flex;
 	flex-direction: row;
 	align-items: center;
-	justify-content: center;
+	justify-content: center;*/
 	padding-top: 4rem;
+	text-align: center;
 }
 
 

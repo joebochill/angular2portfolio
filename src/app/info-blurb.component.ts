@@ -19,7 +19,7 @@ export class InfoBlurbComponent implements AfterViewInit{
 	  minDuration: 400,
 	  maxDuration: 400,
 	  element: window,
-	  cancelOnUserAction: true
+	  cancelOnUserAction: false
 	};
 
 	constructor(private elementRef: ElementRef){}
@@ -32,8 +32,7 @@ export class InfoBlurbComponent implements AfterViewInit{
 	    if(!this.expanded){
 			animateScrollTo(
 				this.elementRef.nativeElement.offsetTop+
-				this.elementRef.nativeElement.offsetParent.offsetTop
-				- 28, this.scrollOptions);
+				this.elementRef.nativeElement.offsetParent.offsetTop - 28 , this.scrollOptions);
 	    }
 	    transition({element: this.elem, val: (this.expanded?"auto":"0px")});
 	    transition({
