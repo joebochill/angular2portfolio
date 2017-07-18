@@ -20,9 +20,6 @@
 	/* Header contains the image and the toggle */
 	.blurbHeader{
 		margin-right: 2rem;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
 	}
 	:host[reverse] .blurbHeader{
 		margin-right: 0;
@@ -32,18 +29,18 @@
 		.blurbImage{
 			height: 8rem;
 			width: 8rem;
-			flex: 0 0 auto;
+/*			flex: 0 0 auto;*/
 			background-size: 100%;
 			background-position: center;
 			background-repeat: no-repeat;
 			border-radius: 50%;
 		}
 		:host[small] .blurbImage{
-			background-size: 50%;/*4rem 4rem;*/
+			background-size: 50%;
 			background-position: top center;
 		}
 		:host[medium] .blurbImage{
-			background-size: 62.5%;/*5rem 5rem;*/
+			background-size: 62.5%;
 			background-position: top center;
 		}
 
@@ -116,8 +113,8 @@
 		text-align: center;
 		font-weight: 800;
 	}
-	:host[type='project'] .blurbContent{ /* this is used when the show/hide is at the bottom of the section */
-		margin-bottom: 4rem;
+	:host[type='project'] .blurbContent, :host[type='project'][reverse] .blurbContent{ /* this is used when the show/hide is at the bottom of the section */
+		padding-bottom: 4rem;
 	}
 
 		/* Item wrapper wraps each item (h1/h2) in the blurb */
@@ -186,11 +183,12 @@
 
 @media (max-width: 500px){
 	.blurbBody, :host[reverse] .blurbBody{
-		flex-direction: column;
-		align-items: center;
+		display: block;
+		text-align: center;
 	}
 	.blurbHeader, :host[reverse] .blurbHeader{
 		margin: 0;
+		display: inline-block;
 	}
 	.blurbImage{
 		height: 5rem;
@@ -210,9 +208,6 @@
 	    left: 50%;
 	    transform: translateX(-50%);
 	    bottom: 2rem;
-	}
-	:host[type='project'] .blurbContent{
-		margin-bottom: 4rem;
 	}
 	.blurbExpander, :host[reverse] .blurbExpander{
 		left: 50%;
