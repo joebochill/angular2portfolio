@@ -15,7 +15,6 @@
 	background: rgba(0,0,0,.6);
 }
 .homeText{
-	font-family: 'DIN', sans-serif;
 	color: white;
 	user-select: none;
 	cursor: default;
@@ -24,7 +23,6 @@
 .navBar{
 	font-size: 1.5rem;
 	line-height: 1.7rem;
-	font-weight: lighter;
 	padding-left: 2rem;
 	color: rgba(255,255,255,.7);
 }
@@ -52,7 +50,6 @@
 	line-height: 8rem;
 }
 .roleBar{
-	font-weight: medium;
 	font-size: 2.5rem;
 	line-height: 2.5rem;
 	color: rgba(255,255,255,.7);
