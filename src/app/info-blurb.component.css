@@ -67,7 +67,7 @@
 			.toggleIcon{
 				width: 1rem;
 				height: 1rem;
-				background: url('../images/icons/expand.svg');
+				background: url('./images/icons/expand.svg');
 				background-size: 100%;
 				background-repeat: no-repeat;
 				transition: transform 400ms ease-in-out;

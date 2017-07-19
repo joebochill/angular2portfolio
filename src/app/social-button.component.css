@@ -1,11 +1,7 @@
 :host{
-/*	flex: 1 1 0px;*/
 	display: inline-block;
-	width: 100%;
-	max-width: 8rem;
-	max-height: 8rem;
-	min-width: 5rem;
-	min-height: 5rem;
+	width: 8rem;
+	height: 8rem;
 	margin: 0 .5rem;
 	border-radius: 50%;
 	cursor: pointer;
@@ -14,40 +10,28 @@
 	height: 100%;
 	width: 100%;
 	border-radius: 50%;
-	position: relative;
+	background-size: 99%;
+	background-position: center;
+	background-repeat: no-repeat;
 }
-:host[email] .socialButton{
+:host[type="fb"] .socialButton{
+	background-image: url('./images/icons/social/fb.svg');
+}
+:host[type="li"] .socialButton{
+	background-image: url('./images/icons/social/li.svg');
+}
+:host[type="email"] .socialButton{
+	background-image: url('./images/icons/social/email.svg');
+	background-size: 60%;
 	border: .2rem solid #171717;
 }
-.socialButton > img.mainImg{
-	display: block;
-	width: 100%;
-	border-radius: 50%;
+:host[type="hr"] .socialButton{
+	background-image: url('./images/icons/social/hr.svg');
 }
-.socialButton > img.hoverImg{
-	display:none;
-	width: 100%;
-	border-radius: 100%;
-	position: absolute;
-	top: 0;
-	left: 0;
-}
-:host:hover img.hoverImg{
-	display: block;
-}
-:host[email] .socialButton > img{
-	border-radius: 0;
-	width: 60%;
-	height: 60%;
-	margin: 20%;
-}
-:host[email]:hover .socialButton > img.mainImg{
-	opacity: 0;
+:host[type="ig"] .socialButton{
+	background-image: url('./images/icons/social/ig.svg');
 }
 .socialButton > .lighten{
-	position: absolute;
-	top: 0;
-	left: 0;
 	height: 100%;
 	width: 100%;
 	border-radius: 50%;
@@ -57,18 +41,30 @@
 .socialButton:hover > .lighten{
 	opacity: 0.07;
 }
-:host[email] .socialButton:hover{
+:host[type="email"] .socialButton:hover{
 	border-color: #378de8;
+	background-image: url('./images/icons/social/email-blue.svg');
 }
-:host[email] .socialButton > .lighten{
+:host[type="email"] .socialButton > .lighten{
 	display: none;
 }
 
 
 
 /* Responsive Styles */
-@media (max-width: 440px){
+@media (max-width: 720px){
 	:host{
-		margin: .5rem 0;
+		width: 5rem;
+		height: 5rem;
+		margin: 0 .25rem;
+	}
+}
+@media (max-width: 500px){
+	:host{
+		display: block;
+		margin: 0 auto .5rem auto;
+	}
+	:host:last-child{
+		margin-bottom: 0;
 	}
 }

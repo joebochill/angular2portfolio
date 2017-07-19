@@ -6,7 +6,7 @@
 
 <div *ngIf="type=='education' && data" class="blurbBody">
 	<div class="blurbHeader">
-		<div class="blurbImage" style="background-image:url('../images/icons/education.svg');"></div>
+		<div class="blurbImage" style="background-image:url('./images/icons/education.svg');"></div>
 	</div>
 	<div class="blurbContent">
 		<div *ngFor="let edu of data" class="itemWrapper">
@@ -19,7 +19,7 @@
 
 <div *ngIf="type=='employment' && data" class="blurbBody">
 	<div class="blurbHeader">
-		<div class="blurbImage" style="background-image:url('../images/icons/experience.svg');"></div>
+		<div class="blurbImage" style="background-image:url('./images/icons/experience.svg');"></div>
 	</div>
 	<div class="blurbContent">
 		<div *ngFor="let exp of data" class="itemWrapper">
@@ -31,7 +31,7 @@
 
 <div *ngIf="type=='skills' && data" class="blurbBody">
 	<div class="blurbHeader">
-		<div class="blurbImage" style="background-image:url('../images/icons/skills.svg');"></div>
+		<div class="blurbImage" style="background-image:url('./images/icons/skills.svg');"></div>
 	</div>
 	<div class="blurbContent">
 		<div *ngIf="data.programming" class="itemWrapper">

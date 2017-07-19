@@ -1,23 +1,27 @@
 @font-face {
     font-family: "DIN";
     font-weight: regular;
-    src: url('./fonts/din_reduced.ttf');
+    src: url('../fonts/din_reduced-webfont.woff2') format('woff2'),
+         url('../fonts/din_reduced-webfont.woff') format('woff');
 }
 @font-face {
     font-family: "DIN";
     font-weight: bold;
     font-weight: ;
-    src: url('./fonts/dinbold_reduced.ttf');
+    src: url('../fonts/dinbold_reduced-webfont.woff2') format('woff2'),
+         url('../fonts/dinbold_reduced-webfont.woff') format('woff');
 }
 @font-face {
     font-family: "DIN_Cond";
     font-weight: regular;
-    src: url('./fonts/dincond_reduced.otf');
+    src: url('../fonts/dincond_reduced-webfont.woff2') format('woff2'),
+         url('../fonts/dincond_reduced-webfont.woff') format('woff');
 }
 @font-face {
     font-family: "DIN_Cond";
     font-weight: bold;
-    src: url('./fonts/dincondbold_reduced.otf');
+    src: url('../fonts/dincondbold_reduced-webfont.woff2') format('woff2'),
+         url('../fonts/dincondbold_reduced-webfont.woff') format('woff');
 }
 
 html{

@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 		<about-panel id="aboutPanel"></about-panel>
 		<portfolio-panel id="portfolioPanel"></portfolio-panel>
 		<contact-panel id="contactPanel"></contact-panel>
-	`
+	`,
+	styleUrls:['./app.component.css']
 })
 export class AppComponent  {}

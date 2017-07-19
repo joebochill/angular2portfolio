@@ -4,7 +4,7 @@ import {PortfolioService} from './portfolio.service';
 @Component({
 	selector: 'portfolio-panel',
 	templateUrl: './portfolio-panel.component.html',
-	styleUrls: ['./portfolio-panel.component.css']
+	styleUrls: []
 })
 
 export class PortfolioPanelComponent implements OnInit{

@@ -4,11 +4,26 @@ import {DatePipe} from '@angular/common';
 @Component({
 	selector: 'contact-panel',
 	templateUrl: './contact-panel.component.html',
-	styleUrls: ['./contact-panel.component.css']
+	styles: [`
+		.footer{
+			width:100%;
+			text-align:center;
+			font-size: 1.2rem;
+		}
+		.contactButtons{
+			padding-top: 4rem;
+			text-align: center;
+		}
+	`]
 })
 
 export class ContactPanelComponent implements OnInit{
 	private currentDate: Date;
+	private fbLink = "https://www.facebook.com/joseph.boyle.50";
+	private liLink = "https://www.linkedin.com/profile/view?id=111377795";
+	private emailLink = "mailto:boyle.p.joseph@gmail.com";
+	private hrLink = "https://www.hackerrank.com/joebochill";
+	private igLink = "https://www.instagram.com/joebochill";
 
 	ngOnInit(){
 		this.currentDate = new Date();

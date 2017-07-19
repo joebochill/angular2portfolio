@@ -4,7 +4,7 @@ import {PortfolioService} from './portfolio.service';
 @Component({
 	selector: 'about-panel',
 	templateUrl: './about-panel.component.html',
-	styleUrls: ['./about-panel.component.css']
+	styleUrls: []
 })
 
 export class AboutPanelComponent{
