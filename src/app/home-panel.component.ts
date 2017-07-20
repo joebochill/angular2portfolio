@@ -8,9 +8,9 @@ import animateScrollTo from 'animated-scroll-to';
             <div class="shadowBox">
             	<div class="homeText">
 	                <div class="navBar">
-	                	<div (click)="_scrollIntoView('aboutPanel')">ABOUT</div> / 
-	                	<div (click)="_scrollIntoView('portfolioPanel')">PORTFOLIO</div> / 
-	                	<div (click)="_scrollIntoView('contactPanel')">CONTACT</div> /
+	                	<div (click)="_scrollIntoView('aboutPanel')">ABOUT</div><div class="slash">/</div><br class="break" />
+	                	<div (click)="_scrollIntoView('portfolioPanel')">PORTFOLIO</div><div class="slash">/</div><br class="break" />
+	                	<div (click)="_scrollIntoView('contactPanel')">CONTACT</div><div class="slash">/</div><br class="break" />
 	                	<div (click)="_openLink('/resume/Boyle_Joseph_Resume.pdf')" class="icon download">R&Eacute;SUM&Eacute;</div>
                 	</div>
 	                <div class="nameBar">JOSEPH P. BOYLE</div>

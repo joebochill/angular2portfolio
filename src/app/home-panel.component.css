@@ -26,12 +26,19 @@
 	padding-left: 2rem;
 	color: rgba(255,255,255,.7);
 }
+.navBar > br.break{
+	display: none;
+}
 .navBar > div{
 	display: inline-block;
 	cursor: pointer;
 	position: relative;
-	margin: 0 .5rem;
+	margin: 0 .25rem;
 	border-bottom: 0.1rem solid transparent;
+}
+.navBar > div.slash{
+	cursor: default;
+	margin-right: 0rem;
 }
 .navBar > div:first-child{
 	margin-left: 0;
@@ -39,7 +46,7 @@
 .navBar > div:last-child{
 	margin-right: 0;
 }
-.navBar > div:hover{
+.navBar > div:not(.slash):hover{
 	color: white;
 	opacity: 1;
 	border-color: white;
@@ -66,7 +73,7 @@
 }
 
 /* RESPONSIVE STYLING */
-@media (max-width: 780px){
+@media (max-width: 795px){
 	.nameBar{
 		font-size: 7rem;
 		line-height: 5.5rem;
@@ -79,12 +86,21 @@
 		line-height: 1.7rem;
 	}
 }
-@media (max-width: 575px){
+@media (max-width: 572px){
 	.nameBar, .roleBar{
 		text-align: right;
 	}
 	.navBar{
 		text-align: right;
+	}
+	.navBar > div{
+		margin: 0;
+	}
+	.navBar > div.slash{
+		display: none;
+	}
+	.navBar > br.break{
+		display: inline;
 	}
 }
 @media (max-width: 350px){
