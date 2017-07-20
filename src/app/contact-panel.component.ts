@@ -14,6 +14,14 @@ import {DatePipe} from '@angular/common';
 			padding-top: 4rem;
 			text-align: center;
 		}
+		.break{
+			display: none;
+		}
+		@media (max-width: 720px){
+			.break{
+				display: inline;
+			}
+		}
 	`]
 })
 
