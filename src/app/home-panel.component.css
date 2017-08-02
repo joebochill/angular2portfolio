@@ -22,8 +22,8 @@
 }
 .navBar{
 	font-size: 1.5rem;
-	line-height: 1.7rem;
-	padding-left: 2rem;
+	line-height: 2rem;
+	padding-left: 1.5rem;
 	color: rgba(255,255,255,.7);
 }
 .navBar > br.break{
@@ -34,7 +34,6 @@
 	cursor: pointer;
 	position: relative;
 	margin: 0 .25rem;
-	border-bottom: 0.1rem solid transparent;
 }
 .navBar > div.slash{
 	cursor: default;
@@ -48,50 +47,39 @@
 }
 .navBar > div:not(.slash):hover{
 	color: white;
-	opacity: 1;
-	border-color: white;
+	text-decoration: underline;
 }
 .nameBar{
 	font-family: 'DIN_Cond', sans-serif;
-	font-size: 10rem;
-	line-height: 8rem;
+	font-size: 7rem;
+	line-height: 5.5rem;
 }
 .roleBar{
-	font-size: 2.5rem;
-	line-height: 2.5rem;
+	font-size: 1.5rem;
+	line-height: 2rem;
 	color: rgba(255,255,255,.7);
 }
 .icon.download{
-	padding-left: 1.5rem;
 	display: inline-block;
-	background-image: url('./images/icons/download.svg');
 	background-size: 1rem 1rem;
-	background-position: left center;
+	background-position: -1rem 0.4rem;
 	background-repeat: no-repeat;
-	color: white;
-	opacity: 0.7;
+	transition: padding-left 300ms ease-in-out, background-position 300ms ease-in-out;
+}
+.icon.download:hover{
+	padding-left: 1.5rem;
+	background-image: url('./images/icons/download.svg');
+	background-position: 0 0.4rem;
 }
 
 /* RESPONSIVE STYLING */
-@media (max-width: 795px){
-	.nameBar{
-		font-size: 7rem;
-		line-height: 5.5rem;
-	}
-	.navBar{
-		padding-left: 1.5rem;
-	}
-	.roleBar{
-		font-size: 1.5rem;
-		line-height: 1.7rem;
-	}
-}
 @media (max-width: 572px){
 	.nameBar, .roleBar{
 		text-align: right;
 	}
 	.navBar{
 		text-align: right;
+		line-height: 1.8rem;
 	}
 	.navBar > div{
 		margin: 0;
@@ -101,6 +89,9 @@
 	}
 	.navBar > br.break{
 		display: inline;
+	}
+	.roleBar{
+		line-height: 1.8rem;
 	}
 }
 @media (max-width: 350px){
